@@ -24,3 +24,6 @@ def register(request):
     registered = False
     if request.method == 'POST':
         pass
+
+def donor_ui(request):
+    return render(request,"donor/donorui.html",{})
