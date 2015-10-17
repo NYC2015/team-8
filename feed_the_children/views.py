@@ -10,7 +10,6 @@ from feed_the_children.models import UserProfile
 def index(request):
     return HttpResponse('OK')
 
-
 def register(request):
     registered = False
     if request.method == 'POST':
@@ -28,7 +27,7 @@ def register(request):
             registered = True
             return HttpResponse('Registered')
         else:
-            print user_form.errors
+            print (user_form.errors)
     else:
         user_form = UserForm()
 
