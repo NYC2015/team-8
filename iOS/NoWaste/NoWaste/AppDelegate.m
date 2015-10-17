@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ServerAPI.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    ServerAPI *server = [ServerAPI getInstance];
+    server.common = [[NSMutableArray alloc] initWithArray:@[@"apples", @"bananas"]];
+    server.inventory = [[NSMutableDictionary alloc] init];
     return YES;
 }
 

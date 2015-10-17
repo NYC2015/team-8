@@ -6,30 +6,33 @@
 //  Copyright © 2015 com.reynoldsJay. All rights reserved.
 //
 
-#import "Inventory.h"
+#import "Common.h"
 #import "ServerAPI.h"
 
-@interface Inventory()
+@interface Common()
+
+@property IBOutlet UITableView *common;
+
 
 @end
 
-@implementation Inventory {
-    ServerAPI* server;
-    NSMutableDictionary* dict;
+@implementation Common {
+    NSArray *exampleItems;
+    ServerAPI *server;
+    NSString *select;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     server = [ServerAPI getInstance];
-    dict = server.inventory;
+    exampleItems = server.common;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 // table view methods
 
@@ -57,11 +60,33 @@
     UILabel *cellLabel = (UILabel *)[cell viewWithTag:10];
     cellLabel.text = exampleItems[indexPath.row];
     
-    
+
     
     
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    select = exampleItems[indexPath.row];
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Pounds:"
+                                                    message:nil
+                                                     delegate:self
+                                            cancelButtonTitle:@"Cancel"
+                                            otherButtonTitles:@"Continue", nil];
+    
+    [message setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [message show];
+    
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        server.inventory[select] = [alertView textFieldAtIndex:0].text;
+        [self performSegueWithIdentifier:@"toInv" sender:self];
+    }
 }
 
 

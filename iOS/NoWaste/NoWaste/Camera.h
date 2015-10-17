@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Camera : UIViewController
+@interface Camera : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
