@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-lg-12">
 <form id="login_form" method="post" action="/snap/login/">
     {% csrf_token %}
     Username: <input type="text" name="username" value="" size="50" />
@@ -6,3 +9,5 @@
     <br />
     <input type="submit" value="Go">
 </form>
+    </div>
+{% endblock %}

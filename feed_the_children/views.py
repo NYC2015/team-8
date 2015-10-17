@@ -4,11 +4,12 @@ from django.contrib.auth.decorators import login_required
 
 from feed_the_children.forms import UserForm
 from feed_the_children.models import UserProfile
-
+import random
 
 # Create your views here.
 def index(request):
-    return render(request, 'landing.html')
+    return render(request, 'feed_the_children/login.html')
+
 
 def register(request):
     registered = False
@@ -24,7 +25,6 @@ def register(request):
                                        zip='10018',
                                        net_income=1000,
                                        household_size=3)
-            registered = True
             return HttpResponse('Registered')
         else:
             print (user_form.errors)
@@ -53,3 +53,15 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return HttpResponse('LOGGED_OUT')
+
+
+@login_required()
+def list_of_food(request):
+    context_dict = {'items': [('bannnas', 'walgreens', 3), ('watermelon', 'walgreens', 1), ('milk', 'costco', 1)]}
+    return render(request, 'feed_the_children/foodlist.html', context_dict)
+
+def get_coupon(request):
+    coupon_list = ['0000','0001','1000','1111']
+    index = random.randrange(0,5)
+    return render(request, 'feed_the_children/coupon.html',coupon_list[index])
+
