@@ -7,6 +7,7 @@ from donor import models
 class DonorProfileForm(forms.ModelForm):
     class Meta:
         model = models.DonorProfile
+    fields = ('user',)
 
 
 class StoreForm(forms.ModelForm):
