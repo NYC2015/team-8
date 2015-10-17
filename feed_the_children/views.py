@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 
 from feed_the_children.forms import UserForm
 from feed_the_children.models import UserProfile
+
+from donor.models import Coupon
 import random
 
 # Create your views here.
@@ -67,7 +69,7 @@ def get_food(request):
                                                            'quantity': request.GET['qty']})
 
 def get_coupon(request):
-    coupon_list = ['0000','0001','1000','1111']
+    coupon_list = Coupon.objects.all()
     index = random.randrange(0,5)
     return render(request, 'feed_the_children/coupon.html',coupon_list[index])
 
