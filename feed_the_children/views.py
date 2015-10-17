@@ -79,7 +79,7 @@ def get_food(request):
                                                            'quantity': request.GET['qty']})
 
 def get_coupon(request):
-    coupon_list = Coupon.objects.all()
-    index = random.randrange(0,5)
-    return render(request, 'feed_the_children/coupon.html',coupon_list[index])
+    index = random.randrange(1,4)
+    coupon = Coupon.objects.get(pk=1)
+    return render(request, 'feed_the_children/coupon.html',coupon)
 
