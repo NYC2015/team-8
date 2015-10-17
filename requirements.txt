@@ -1,2 +1,2 @@
-django-registration-redux
+
 django
