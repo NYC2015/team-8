@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <form action="/snap/register/" method="post" id="user_form" enctype="multipart/form-data">
+<<<<<<< HEAD
     <!-- {% csrf_token %} -->
     <!-- {{ user_form.as_p }} -->
 <!-- </form> -->
@@ -41,3 +42,12 @@
      </div>
     </body>
 {% endblock %}
+=======
+    {% csrf_token %}
+    {{ user_form.as_p }}
+       <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+</form>
+{% endblock %}
+>>>>>>> 2222d1cb4dd4a8e492a6ba5ee5d832ef08d1e070

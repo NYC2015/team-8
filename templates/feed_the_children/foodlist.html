@@ -9,6 +9,7 @@
 {% endblock %}
 {% block content %}
     {% for item in items %}
+<<<<<<< HEAD
         <ul class="collapsible popout" data-collapsible="accordion">
             <li>
                 <div class="collapsible-header">
@@ -36,5 +37,18 @@
             </li>
         </ul>
 
+=======
+        <div class="row">
+      <div class="col s12 m5">
+        <div class="card-panel teal">
+          <span class="white-text">
+                {{ item.0 }}
+                {{ item.1 }}
+                {{ item.2 }}
+          </span>
+        </div>
+      </div>
+    </div>
+>>>>>>> 2222d1cb4dd4a8e492a6ba5ee5d832ef08d1e070
     {% endfor %}
 {% endblock %}

@@ -20,7 +20,7 @@ def register(request):
             DonorProfile.objects.create(user=donor, store=store)
             return HttpResponse('REQUEST SENT')
         else:
-            print donor_form.errors
+            print (donor_form.errors)
     else:
         donor_form = DonorForm()
         store_form = StoreForm()
