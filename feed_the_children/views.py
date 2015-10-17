@@ -8,7 +8,7 @@ from feed_the_children.models import UserProfile
 
 # Create your views here.
 def index(request):
-    return render(request, 'base.html')
+    return render(request, 'landing.html')
 
 def register(request):
     registered = False
