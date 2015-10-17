@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse
 
 from feed_the_children.forms import UserForm, UserProfileForm
+from feed_the_children.models import UserProfile
 
 
 # Create your views here.
@@ -12,24 +13,20 @@ def register(request):
     registered = False
     if request.method == 'POST':
         user_form = UserForm(data=request.POST)
-        profile = UserProfileForm(request.POST)
-        if user_form.is_valid() and profile.is_valid():
+        if user_form.is_valid():
             user = user_form.save()
             user.set_password(user.password)
             user.save()
-            profile.save(commit=False)
-            profile.user = request.user
-            profile.address = '270 Avenue'
-            profile.state = 'NY'
-            profile.zip = '10000'
-            profile.net_income = 10000
-            profile.household_size = 2
-            profile.save()
-
+            UserProfile.objects.create(user=user,
+                                       address='270 Avenue',
+                                       state='NY',
+                                       zip='10018',
+                                       net_income=1000,
+                                       household_size=3)
             registered = True
             return HttpResponse('Registered')
         else:
-            print user_form.errors, profile.errors
+            print user_form.errors
     else:
         user_form = UserForm()
 
