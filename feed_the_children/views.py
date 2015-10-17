@@ -12,7 +12,6 @@ def index(request):
 
 
 def register(request):
-    registered = False
     if request.method == 'POST':
         user_form = UserForm(data=request.POST)
         if user_form.is_valid():
@@ -31,7 +30,7 @@ def register(request):
     else:
         user_form = UserForm()
 
-    return render(request, 'feed_the_children/register.html', {'user_form': user_form, 'registered': registered})
+    return render(request, 'feed_the_children/register.html', {'user_form': user_form})
 
 
 def user_login(request):
@@ -59,6 +58,13 @@ def user_logout(request):
 def list_of_food(request):
     context_dict = {'items': [('bannnas', 'walgreens', 3), ('watermelon', 'walgreens', 1), ('milk', 'costco', 1)]}
     return render(request, 'feed_the_children/foodlist.html', context_dict)
+
+
+@login_required()
+def get_food(request):
+    return render(request, 'feed_the_children/food.html', {'name': request.GET['name'],
+                                                           'store': request.GET['store'],
+                                                           'quantity': request.GET['qty']})
 
 def get_coupon(request):
     coupon_list = ['0000','0001','1000','1111']

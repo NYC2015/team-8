@@ -1,0 +1,153 @@
+[
+  {
+    "model": "donor.store",
+    "pk": 1,
+    "fields": {
+      "name": "Walgreens",
+      "address": "475 Avenue",
+      "state": "NY",
+      "zip": 10018
+    }
+  },
+  {
+    "model": "donor.store",
+    "pk": 2,
+    "fields": {
+      "name": "Pathmark",
+      "address": "475 Avenue",
+      "state": "NY",
+      "zip": 10020
+    }
+  },
+  {
+    "model": "donor.store",
+    "pk": 3,
+    "fields": {
+      "name": "Costco",
+      "address": "475 Avenue",
+      "state": "NY",
+      "zip": 10118
+    }
+  },
+   {
+    "model": "donor.Food",
+    "pk": 1,
+    "fields": {
+        "store": 1,
+        "name" : "Chicken",
+        "quantity": 20,
+        "weight": 30
+
+    }
+  },
+  {
+    "model": "donor.Food",
+    "pk": 2,
+    "fields": {
+        "store": 2,
+        "name" : "Apple",
+        "quantity": 2,
+        "weight": 1
+
+    }
+  },
+  {
+    "model": "donor.Food",
+    "pk": 3,
+    "fields": {
+        "store": 3,
+        "name" : "Milk",
+        "quantity": 10,
+        "weight": 50
+
+    }
+  },
+  {
+    "model": "donor.Food",
+    "pk": 4,
+    "fields": {
+        "store": 1,
+        "name" : "Milk",
+        "quantity": 10,
+        "weight": 50
+
+    }
+  },
+  {
+    "model": "donor.Food",
+    "pk": 5,
+    "fields": {
+        "store": 2,
+        "name" : "Milk",
+        "quantity": 10,
+        "weight": 50
+
+    }
+  },
+   {
+    "model": "donor.Food",
+    "pk": 6,
+    "fields": {
+        "store": 1,
+        "name" : "Chicken",
+        "quantity": 20,
+        "weight": 30
+
+    }
+  },
+   {
+    "model": "donor.Food",
+    "pk": 7,
+    "fields": {
+        "store": 1,
+        "name" : "Chicken",
+        "quantity": 20,
+        "weight": 30
+
+    }
+  },
+   {
+    "model": "donor.Food",
+    "pk": 8,
+    "fields": {
+        "store": 1,
+        "name" : "Chicken",
+        "quantity": 20,
+        "weight": 30
+
+    }
+  },
+   {
+    "model": "donor.Food",
+    "pk": 9,
+    "fields": {
+        "store": 1,
+        "name" : "Chicken",
+        "quantity": 20,
+        "weight": 30
+
+    }
+  },
+   {
+    "model": "donor.Food",
+    "pk": 10,
+    "fields": {
+        "store": 1,
+        "name" : "Chicken",
+        "quantity": 20,
+        "weight": 30
+
+    }
+  },
+   {
+    "model": "donor.Food",
+    "pk": 11,
+    "fields": {
+        "store": 1,
+        "name" : "Chicken",
+        "quantity": 20,
+        "weight": 30
+
+    }
+  }
+]
