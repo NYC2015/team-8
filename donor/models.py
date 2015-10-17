@@ -33,7 +33,7 @@ class Food(models.Model):
 
 class Coupon(models.Model):
     food = models.ForeignKey(Food)
-    code = models.CharField(max_length=50, help_text='Coupon code text', default='No coupon code entered')
+    code = models.IntegerField(help_text='Coupon code', default=0)
     quantity = models.IntegerField(help_text='Quantity of coupons')
 
     def __unicode__(self):

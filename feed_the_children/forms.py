@@ -15,3 +15,4 @@ class UserForm(forms.ModelForm):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = models.UserProfile
+        fields = ('user',)
