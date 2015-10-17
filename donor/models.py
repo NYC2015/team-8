@@ -7,7 +7,7 @@ class Store(models.Model):
     name = models.CharField(max_length=50, help_text='Store name', default='No name provided')
     address = models.CharField(max_length=50, help_text='Address', default='No address provided')
     state = models.CharField(max_length=2, help_text='State', default='No state provided')
-    zip = models.IntegerField(help_text='Zip code', default='000000')
+    zip = models.IntegerField(help_text='Zip code', default=0)
 
     def __unicode__(self):
         return self.name

@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'login/', views.donor_login, name='login'),
     url(r'logout/', views.donor_logout, name='logout'),
     url(r'picupload/', views.upload_picture, name='pic_upload'),
+    url(r'add/', views.add_food, name='add_food'),
 ]

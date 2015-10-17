@@ -1,14 +1,15 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
-from donor.forms import DonorForm, StoreForm, FoodPictureForm
-from donor.models import DonorProfile, FoodPicture
+from donor.forms import DonorForm, StoreForm, FoodPictureForm, FoodForm
+from donor.models import DonorProfile, FoodPicture, Food
 
 
 # Create your views here.
 def index(request):
-    return render(request, 'donor/login.html', {})
+    food_list = Food.objects.filter(store=DonorProfile.objects.get(user=request.user).store)
+    return render(request, 'donor/index.html', {'food_list': food_list})
 
 
 def register(request):
@@ -75,3 +76,25 @@ def upload_picture(request):
         form = FoodPictureForm()
 
     return render(request, 'donor/picupload.html', {'form': form})
+
+
+@login_required()
+def add_food(request):
+    if request.method == 'POST':
+        food_form = FoodForm(request.POST)
+        if food_form.is_valid():
+            food = food_form.save(commit=False)
+            food.store = DonorProfile.objects.get(user=request.user).store
+            food.save()
+            return HttpResponseRedirect('/donor/')
+        else:
+            print food_form.errors
+    else:
+        food_form = FoodForm()
+
+    return render(request, 'donor/add.html', {'add_form': food_form})
+
+
+@login_required()
+def scan_coupon(request):
+    pass

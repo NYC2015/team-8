@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <br>
+    <div class="col-lg-12">
+    <div class="card-panel">Currently donating:</div>
+    <div class="card-panel">
+    <a class="btn" href="/donor/add/">Donate</a>
+    <hr>
+    <br>
+        {% if food_list %}
+        <ul>
+        {% for food in food_list %}
+        <li>{{ food.name }} - {{ food.quantity }}</li>
+        {% endfor %}
+        </ul>
+        {% else %}
+        Not currently donating foods.
+        {% endif %}
+    </div>
+    </div>
+{% endblock %}

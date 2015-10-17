@@ -2,7 +2,9 @@
 {% block content %}
 <form action="/donor/register/" method="post" id="donor_form" enctype="multipart/form-data">
     {% csrf_token %}
+    <div class="card-panel">Store Info</div>
     {{ store_form.as_p }}
+    <div class="card-panel">Account Info</div>
     {{ donor_form.as_p }}
      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
     <i class="material-icons right">send</i>
