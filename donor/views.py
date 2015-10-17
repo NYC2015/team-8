@@ -1,9 +1,11 @@
 from django.shortcuts import render
-from form import CouponSubmitForm
+from django.http import HttpResponseRedirect
+from .forms import CouponSubmitForm
+
 # Create your views here.
 
 def sale(request):
-    if reguest.session.get('store_login',False):
+    if request.session.get('store_login',False):
         return HttpResponse("Please log in")
     else:
         if request.method == 'POST':
@@ -12,7 +14,8 @@ def sale(request):
                 return HttpResponseRedirect('/donor/submitOK')
         else:
             form = CouponSubmitForm()
-        return render(request,"couponsubmit.html",{'form':form})
+        return render(request,"couponsubmit.html",{'form':form}) #Change couponsubmit to the right template
 
 def submitOK(request):
     return HttpResponseRedirect('/donor/sale')
+    # Do some database stuff here
