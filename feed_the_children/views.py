@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 from feed_the_children.forms import UserForm
@@ -49,7 +49,8 @@ def user_login(request):
     else:
         return render(request, 'feed_the_children/login.html', {})
 
+
 @login_required()
-def logout(request):
+def user_logout(request):
     logout(request)
     return HttpResponse('LOGGED_OUT')

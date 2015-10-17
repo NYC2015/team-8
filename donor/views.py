@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 from donor.forms import DonorForm, StoreForm
@@ -44,6 +44,6 @@ def donor_login(request):
 
 
 @login_required()
-def logout(request):
+def donor_logout(request):
     logout(request)
     return HttpResponse('LOGGED_OUT')
