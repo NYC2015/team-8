@@ -1,6 +1,48 @@
 {% extends 'base.html' %}
 {% block content %}
 <form action="/snap/register/" method="post" id="user_form" enctype="multipart/form-data">
+<<<<<<< HEAD
+    <!-- {% csrf_token %} -->
+    <!-- {{ user_form.as_p }} -->
+<!-- </form> -->
+
+
+    <body>
+     <div class="container">
+         <div class="row">
+             <div class="grid-example col s12"><span class="flow-text">  <br> </span></div>
+         <div class="row">
+            <form class="col s12" id="user_form" method="post" action="/snap/register/" enctype="multipart/form-data">
+                <!-- {{user_form.as_p}} -->
+                
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input name="username" id="username" type="text" class="validate">
+                  <label for="username">Username</label>
+                </div>
+                 <div class="input-field col s6">
+                      <i class="material-icons prefix">https</i>
+                      <input name="password" id="password" type="password" class="validate">
+                      <label for="password">Password</label>
+                  </div>
+              </div>
+                 <!-- <input type="submit" value="Go"> -->
+                 <div class = "row">
+                     <div class="col s6 offset-s4 grid-example">
+                         <button class="btn waves-effect waves-light" type="submit" name="action">Register
+                             <i class="material-icons right">send</i>
+                         </button>
+                 </div>
+                </div>
+                <!-- <input type="submit" value="Go"> -->
+
+            </form>
+          </div>
+     </div>
+    </body>
+{% endblock %}
+=======
     {% csrf_token %}
     {{ user_form.as_p }}
        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
@@ -8,3 +50,4 @@
   </button>
 </form>
 {% endblock %}
+>>>>>>> 2222d1cb4dd4a8e492a6ba5ee5d832ef08d1e070
