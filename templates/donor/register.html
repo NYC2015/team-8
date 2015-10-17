@@ -4,6 +4,9 @@
     {% csrf_token %}
     {{ store_form.as_p }}
     {{ donor_form.as_p }}
-     <input type="submit" value="Go">
+     <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
 </form>
+    <br>
 {% endblock %}
