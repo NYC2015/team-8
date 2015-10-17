@@ -3,8 +3,8 @@ from django.http import HttpResponseRedirect
 from .forms import CouponSubmitForm
 from .models import Coupon
 
-# Create your views here.
 
+# Create your views here.
 def sale(request):
     if request.session.get('store_login',False): #Might need to change store_login
         return HttpResponse("Please log in")
@@ -20,3 +20,7 @@ def sale(request):
             form = CouponSubmitForm()
         return render(request,"donor/couponsubmit.html",{'form':form}) #Change couponsubmit to the right template
 
+def register(request):
+    registered = False
+    if request.method == 'POST':
+        pass
