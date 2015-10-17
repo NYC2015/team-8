@@ -14,7 +14,9 @@ def search(request):
         form = FoodSearchForm(request.POST)
         if form.is_valid():
             food = form.cleaned_data['food']
-            results =  Food.objects.filter(name__contains = food) #Might not work.
+            results =  Food.objects.all().filter(name = food) #Might not work.
+            for result in results:
+                print(result)
         return render(request,"donor/search.html",{'results':results,'form':form})
     else:
         form = FoodSearchForm()

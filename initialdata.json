@@ -31,5 +31,32 @@
         "weight": 50
 
     }
+  },
+  {
+    "model": "donor.Coupon",
+    "pk": 1,
+    "fields": {
+        "food": 2,
+        "code" : "0000",
+        "quantity": 10
+    }
+  },
+  {
+    "model": "donor.Coupon",
+    "pk": 2,
+    "fields": {
+        "food": 1,
+        "code" : "0001",
+        "quantity": 10
+    }
+  },
+  {
+    "model": "donor.Coupon",
+    "pk": 3,
+    "fields": {
+        "food": 3,
+        "code" : "1001",
+        "quantity": 10
+    }
   }
 ]

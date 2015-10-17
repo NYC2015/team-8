@@ -4,10 +4,10 @@ from django.contrib.auth.models import User
 from donor import models
 
 class FoodSearchForm(forms.Form):
-    food = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    food = forms.CharField(label ="food")
 
 class CouponSubmitForm(forms.Form):
-    coupon = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    coupon = forms.CharField(label="coupon")
 
 class DonorForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
