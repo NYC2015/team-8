@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^snap/', include('feed_the_children.urls')),
     url(r'donor/', include('donor.urls')),
+    url(r'^accounts/', include('registration.backends.simple.urls'))
 ]
