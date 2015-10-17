@@ -17,7 +17,7 @@ def register(request):
             donor.set_password(donor.password)
             donor.is_active = False
             donor.save()
-            profile = DonorProfile.objects.create(user=donor, store=store)
+            DonorProfile.objects.create(user=donor, store=store)
             return HttpResponse('REQUEST SENT')
         else:
             print donor_form.errors
