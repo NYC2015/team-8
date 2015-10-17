@@ -4,11 +4,8 @@
     <list default="true" id="9654906b-5efd-450b-ae1f-e0b02a9fb28f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/feed_the_children/food.html" afterPath="$PROJECT_DIR$/templates/feed_the_children/food.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixture.json" afterPath="$PROJECT_DIR$/fixture.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/feed_the_children/foodlist.html" afterPath="$PROJECT_DIR$/templates/feed_the_children/foodlist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/donor/login.html" afterPath="$PROJECT_DIR$/templates/donor/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/feed_the_children/login.html" afterPath="$PROJECT_DIR$/templates/feed_the_children/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/donor/views.py" afterPath="$PROJECT_DIR$/donor/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed_the_children/views.py" afterPath="$PROJECT_DIR$/feed_the_children/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -37,14 +34,14 @@
     <favorites_list name="team8" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5">
+    <splitter split-orientation="vertical" split-proportion="0.64344263">
       <split-first>
         <leaf>
           <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/feed_the_children/views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="79" column="46" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+                  <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
                   <folding>
                     <element signature="e#0#71#0" expanded="true" />
                   </folding>
@@ -62,21 +59,31 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="foodlist.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="foodlist.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/feed_the_children/foodlist.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.45945945">
-                  <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+                <state vertical-scroll-proportion="-2.1818182">
+                  <caret line="77" column="93" selection-start-line="77" selection-start-column="93" selection-end-line="77" selection-end-column="93" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="fixture.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/fixture.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-7.3461537">
+                  <caret line="113" column="25" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-7.1923075">
-                  <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+                <state vertical-scroll-proportion="0.6692913">
+                  <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -108,7 +115,7 @@
             <entry file="file://$PROJECT_DIR$/feed_the_children/urls.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+                  <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -134,16 +141,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/feed_the_children/register.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-3.2692308">
-                  <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="7" selection-end-column="11" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -151,8 +148,8 @@
           <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/feed_the_children/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.0">
-                  <caret line="79" column="46" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+                <state vertical-scroll-proportion="0.6527778">
+                  <caret line="72" column="71" selection-start-line="72" selection-start-column="71" selection-end-line="72" selection-end-column="71" />
                   <folding>
                     <element signature="e#0#71#0" expanded="true" />
                   </folding>
@@ -199,7 +196,6 @@
         <option value="$PROJECT_DIR$/donor/fixture.json" />
         <option value="$PROJECT_DIR$/donor/admin.py" />
         <option value="$PROJECT_DIR$/feed_the_children/admin.py" />
-        <option value="$PROJECT_DIR$/fixture.json" />
         <option value="$PROJECT_DIR$/donor/models.py" />
         <option value="$PROJECT_DIR$/templates/donor/picupload.py" />
         <option value="$PROJECT_DIR$/templates/donor/picupload.html" />
@@ -208,12 +204,13 @@
         <option value="$PROJECT_DIR$/donor/urls.py" />
         <option value="$PROJECT_DIR$/templates/donor/register.html" />
         <option value="$PROJECT_DIR$/templates/feed_the_children/login.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/feed_the_children/views.py" />
         <option value="$PROJECT_DIR$/donor/views.py" />
         <option value="$PROJECT_DIR$/templates/donor/login.html" />
         <option value="$PROJECT_DIR$/templates/feed_the_children/food.html" />
         <option value="$PROJECT_DIR$/templates/feed_the_children/foodlist.html" />
+        <option value="$PROJECT_DIR$/fixture.json" />
+        <option value="$PROJECT_DIR$/feed_the_children/views.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -902,7 +899,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445078587150</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Add food page">
+      <created>1445083922457</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1445083922457</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -962,7 +965,8 @@
     <MESSAGE value="Add exact search" />
     <MESSAGE value="Formatting fixes" />
     <MESSAGE value="Add register button and seperate logins for apps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add register button and seperate logins for apps" />
+    <MESSAGE value="Add food page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add food page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1056,7 +1060,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="false" />
             <marker date="1445076213517" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1445076213517" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
@@ -1068,7 +1072,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="60" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1171,7 +1175,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="false" />
             <marker date="1445076213517" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1445076213517" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
@@ -1183,7 +1187,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="60" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1307,20 +1311,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixture.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feed_the_children/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1333,7 +1329,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="false" />
             <marker date="1445076213517" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1445076213517" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
@@ -1372,14 +1368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/donor/views.py">
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -1401,18 +1389,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feed_the_children/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/feed_the_children/food.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.5384617">
           <caret line="14" column="36" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed_the_children/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/feed_the_children/foodlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.1818182">
+          <caret line="77" column="93" selection-start-line="77" selection-start-column="93" selection-end-line="77" selection-end-column="93" />
           <folding />
         </state>
       </provider>
@@ -1423,17 +1419,25 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="79" column="46" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+          <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
           <folding>
             <element signature="e#0#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/feed_the_children/foodlist.html">
+    <entry file="file://$PROJECT_DIR$/fixture.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45945945">
-          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+        <state vertical-scroll-proportion="-7.3461537">
+          <caret line="113" column="25" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6692913">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
           <folding />
         </state>
       </provider>

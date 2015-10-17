@@ -122,7 +122,7 @@
     "pk": 9,
     "fields": {
         "store": 1,
-        "name" : "Chicken",
+        "name" : "Pork",
         "quantity": 20,
         "weight": 30
 
@@ -133,7 +133,7 @@
     "pk": 10,
     "fields": {
         "store": 1,
-        "name" : "Chicken",
+        "name" : "Turkey",
         "quantity": 20,
         "weight": 30
 
@@ -144,7 +144,7 @@
     "pk": 11,
     "fields": {
         "store": 1,
-        "name" : "Chicken",
+        "name" : "Yams",
         "quantity": 20,
         "weight": 30
 

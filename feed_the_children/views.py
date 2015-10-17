@@ -70,7 +70,10 @@ def list_of_food(request):
         for store in stores:
             foods = Food.objects.filter(store=store.pk)
             for food in foods:
-                nearby_foods.append((store.name, food.name, food.quantity, food.weight))
+                nearby_foods.append((store.name + ' - ' + store.address,
+                                     food.name,
+                                     food.quantity,
+                                     food.weight))
         context_dict = {'items': [v for v in set(nearby_foods)]}
     return render(request, 'feed_the_children/foodlist.html', context_dict)
 
