@@ -20,6 +20,7 @@
 		819CEDF41BD24A3900B0EF87 /* Sales.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEDF11BD24A3900B0EF87 /* Sales.m */; settings = {ASSET_TAGS = (); }; };
 		819CEDFA1BD24A4300B0EF87 /* VendorLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEDF51BD24A4300B0EF87 /* VendorLoginVC.m */; settings = {ASSET_TAGS = (); }; };
 		819CEDFB1BD24A4300B0EF87 /* VendorOps.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEDF61BD24A4300B0EF87 /* VendorOps.m */; settings = {ASSET_TAGS = (); }; };
+		819CEE001BD24CCB00B0EF87 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEDFE1BD24CCB00B0EF87 /* Camera.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		819CEDF91BD24A4300B0EF87 /* VendorOps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VendorOps.h; sourceTree = "<group>"; };
 		819CEDFC1BD24A9100B0EF87 /* AddFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFood.h; sourceTree = "<group>"; };
 		819CEDFD1BD24A9100B0EF87 /* Inventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inventory.h; sourceTree = "<group>"; };
+		819CEDFE1BD24CCB00B0EF87 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
+		819CEDFF1BD24CCB00B0EF87 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 		819CEDCC1BD231F700B0EF87 /* NoWaste */ = {
 			isa = PBXGroup;
 			children = (
+				819CEDFF1BD24CCB00B0EF87 /* Camera.h */,
+				819CEDFE1BD24CCB00B0EF87 /* Camera.m */,
 				819CEDF81BD24A4300B0EF87 /* VendorLoginVC.h */,
 				819CEDF51BD24A4300B0EF87 /* VendorLoginVC.m */,
 				819CEDF91BD24A4300B0EF87 /* VendorOps.h */,
@@ -194,6 +199,7 @@
 				819CEDD51BD231F700B0EF87 /* LandingViewController.m in Sources */,
 				819CEDF21BD24A3900B0EF87 /* AddFood.m in Sources */,
 				819CEDFA1BD24A4300B0EF87 /* VendorLoginVC.m in Sources */,
+				819CEE001BD24CCB00B0EF87 /* Camera.m in Sources */,
 				819CEDD21BD231F700B0EF87 /* AppDelegate.m in Sources */,
 				819CEDCF1BD231F700B0EF87 /* main.m in Sources */,
 				819CEDFB1BD24A4300B0EF87 /* VendorOps.m in Sources */,
