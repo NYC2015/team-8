@@ -1,0 +1,35 @@
+[
+  {
+    "model": "donor.Food",
+    "pk": 1,
+    "fields": {
+        "store": 1,
+        "name" : "Chicken",
+        "quantity": 20,
+        "weight": 30
+
+    }
+  },
+  {
+    "model": "donor.Food",
+    "pk": 2,
+    "fields": {
+        "store": 2,
+        "name" : "Apple",
+        "quantity": 2,
+        "weight": 1
+
+    }
+  },
+  {
+    "model": "donor.Food",
+    "pk": 3,
+    "fields": {
+        "store": 3,
+        "name" : "Milk",
+        "quantity": 10,
+        "weight": 50
+
+    }
+  }
+]
