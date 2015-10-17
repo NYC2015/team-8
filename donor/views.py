@@ -2,8 +2,8 @@ from django.shortcuts import render, HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
-from donor.forms import DonorForm, StoreForm
-from donor.models import DonorProfile
+from donor.forms import DonorForm, StoreForm, FoodPictureForm
+from donor.models import DonorProfile, FoodPicture
 
 
 # Create your views here.
@@ -47,3 +47,17 @@ def donor_login(request):
 def donor_logout(request):
     logout(request)
     return HttpResponse('LOGGED_OUT')
+
+
+@login_required()
+def upload_picture(request):
+    if request.method == 'POST':
+        form = FoodPictureForm(request.POST, request.FILES)
+        if form.is_valid():
+            FoodPicture(picture=request.FILES['picture']).save()
+        else:
+            print form.errors
+    else:
+        form = FoodPictureForm()
+
+    return render(request, 'donor/picupload.html', {'form': form})

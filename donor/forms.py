@@ -34,3 +34,9 @@ class CouponForm(forms.ModelForm):
     class Meta:
         model = models.Coupon
         fields = ('food', 'code', 'quantity')
+
+
+class FoodPictureForm(forms.Form):
+    class Meta:
+        model = models.FoodPicture
+        fields = ('picture',)

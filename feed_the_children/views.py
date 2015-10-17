@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
@@ -6,6 +6,7 @@ from feed_the_children.forms import UserForm
 from feed_the_children.models import UserProfile
 import random
 from donor.models import Food, Store
+
 
 # Create your views here.
 def index(request):
@@ -42,7 +43,7 @@ def user_login(request):
         user = authenticate(username=username, password=password)
         if user:
             login(request, user)
-            return HttpResponse('LOGGED_IN')
+            return HttpResponseRedirect('/snap/list/')
         else:
             return HttpResponse('WRONG AUTH DETAILS')
     else:
@@ -57,16 +58,20 @@ def user_logout(request):
 
 @login_required()
 def list_of_food(request):
-    if request.GET.get('zip', ''):
-        stores = Store.objects.filter(zip=request.GET['zip'])
+    if request.GET.get('q', ''):
+        foods = Food.objects.filter(name=request.GET.get('q', ''))
+        context_dict = {'sitems': [(v.store, v.name, v.quantity, v.weight) for v in foods]}
     else:
-        stores = Store.objects.filter(zip=10018)
-    nearby_foods = []
-    for store in stores:
-        foods = Food.objects.filter(store=store.pk)
-        for food in foods:
-            nearby_foods.append((store.name, food.name, food.quantity, food.weight))
-    context_dict = {'items': [v for v in nearby_foods]}
+        if request.GET.get('zip', ''):
+            stores = Store.objects.filter(zip=request.GET['zip'])
+        else:
+            stores = Store.objects.filter(zip=10018)
+        nearby_foods = []
+        for store in stores:
+            foods = Food.objects.filter(store=store.pk)
+            for food in foods:
+                nearby_foods.append((store.name, food.name, food.quantity, food.weight))
+        context_dict = {'items': [v for v in set(nearby_foods)]}
     return render(request, 'feed_the_children/foodlist.html', context_dict)
 
 
@@ -75,9 +80,3 @@ def get_food(request):
     return render(request, 'feed_the_children/food.html', {'name': request.GET['name'],
                                                            'store': request.GET['store'],
                                                            'quantity': request.GET['qty']})
-
-def get_coupon(request):
-    coupon_list = ['0000','0001','1000','1111']
-    index = random.randrange(0,5)
-    return render(request, 'feed_the_children/coupon.html',coupon_list[index])
-

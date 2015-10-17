@@ -39,3 +39,7 @@ class Coupon(models.Model):
 
     def __unicode__(self):
         return self.code
+
+
+class FoodPicture(models.Model):
+    picture = models.ImageField(upload_to='/static/images')
