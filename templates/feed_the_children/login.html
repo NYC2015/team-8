@@ -2,9 +2,9 @@
 {% block content %}
     <br>
     <div class="col-lg-12">
-<form id="login_form" method="post" action="/snap/login/">
+<form id="login_form" method="post" action="/snap/login/" class="card-panel">
     {% csrf_token %}
-    Username: <input type="text" name="username" value="" size="50" />
+    SNAP ID: <input type="text" name="username" value="" size="50" />
     <br />
     Password: <input type="password" name="password" value="" size="50" />
     <br />

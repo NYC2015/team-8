@@ -8,7 +8,7 @@ from donor.models import DonorProfile, FoodPicture
 
 # Create your views here.
 def index(request):
-    return HttpResponse('OK')
+    return render(request, 'donor/login.html', {})
 
 
 def register(request):

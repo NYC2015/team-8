@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block menu %}
-    <li><a href="sass.html">Profile</a></li>
-        <li><a href="badges.html">Coupons</a></li>
-        <li><a href="badges.html">Credits: 40</a></li>
+    <li><a href="#">Profile</a></li>
+        <li><a href="#">Coupons</a></li>
+        <li><a href="#">Credits: 40</a></li>
 {% endblock %}
 {% block menu_mobile %}
-    <li><a href="sass.html">Profile</a></li>
-    <li><a href="badges.html">Coupons</a></li>
-        <li><a href="badges.html">Credits: 40</a></li>
+    <li><a href="#">Profile</a></li>
+    <li><a href="#">Coupons</a></li>
+        <li><a href="#">Credits: 40</a></li>
 {% endblock %}
 {% block content %}
     <br>
@@ -22,6 +22,7 @@
       </form>
     </div>
     {% if sitems %}
+        <div class="card-panel">
         {% for sitem in sitems %}
             <ul class="collapsible popout" data-collapsible="accordion">
             <li>
@@ -41,7 +42,8 @@
                         <p>
                             {{sitem.2}}
                             <br><br>
-                            <a class="waves-effect waves-light btn modal-trigger" href="#modal1" type="submit" name="action">
+                            <a class="waves-effect waves-light btn"
+                               href="/snap/food/?name={{ sitem.1 }}&store={{ sitem.0 }}&qty={{ sitem.2 }}">
                             Get Coupon
                                 <i class="material-icons right">send</i>
                             </a>
@@ -49,18 +51,9 @@
                     </div>
                 </div>
             </li>
-        </ul
-<!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
+        </ul>
         {% endfor %}
+    </div>
     {% endif %}
     {% for item in items %}
         <ul class="collapsible popout" data-collapsible="accordion">
@@ -81,7 +74,7 @@
                         <p>
                             {{item.2}}
                             <br><br>
-                            <button class="btn waves-effect waves-light" type="submit" name="action">Get Coupon
+                            <button class="waves-effect waves-light btn modal-trigger">Get Coupon
                                 <i class="material-icons right">send</i>
                             </button>
                         </p>

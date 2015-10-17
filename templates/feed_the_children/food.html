@@ -1,14 +1,30 @@
 {% extends 'base.html' %}
 {% block menu %}
-    <li><a href="sass.html">Profile</a></li>
-        <li><a href="badges.html">Coupons</a></li>
+    <li><a href="#">Profile</a></li>
+        <li><a href="#">Coupons</a></li>
+        <li><a href="#">Credits: 40</a></li>
 {% endblock %}
 {% block menu_mobile %}
-    <li><a href="sass.html">Profile</a></li>
-        <li><a href="badges.html">Coupons</a></li>
+    <li><a href="#">Profile</a></li>
+    <li><a href="#">Coupons</a></li>
+        <li><a href="#">Credits: 40</a></li>
 {% endblock %}
 {% block content %}
-<div class="card-panel">
-CODE
-</div>
+      <div class="row">
+        <div class="col s4 offset-s4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">{{ store }}</span>
+              <p>
+                  {{ name }}<br>
+                  <strong>BARCODE</strong> 0x75AFF
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="#"><i class="material-icons">mood</i></a>
+              <a href="#"><i class="material-icons">mood_bad</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
 {% endblock %}
