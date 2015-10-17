@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block body %}
+<form action="/donor/search/" method="post">
+  {%csrf_token%}
+  <div class="form-group">
+    {{form}}
+  </div>
+  <button type = "submit" class="btn btn-primary"> Search </button>
+</form>
+{% for result in results %}
+<p> {{result}} </p>
+{% endfor %}
+{% endblock %}

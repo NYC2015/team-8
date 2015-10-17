@@ -5,6 +5,7 @@ from donor import models
 
 class FoodSearchForm(forms.Form):
     food = forms.CharField(label = "food")
+    form_control = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
 
 class CouponSubmitForm(forms.Form):
     coupon = forms.CharField(label = "Coupon Code")
