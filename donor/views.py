@@ -8,7 +8,7 @@ from donor.models import DonorProfile, FoodPicture, Food
 
 # Create your views here.
 def index(request):
-    food_list = Food.objects.filter(store=DonorProfile.objects.get(user=request.user).store)
+    food_list = Food.objects.filter(store=DonorProfile.objects.get(user=request.user.id).store)
     return render(request, 'donor/index.html', {'food_list': food_list})
 
 
@@ -51,7 +51,7 @@ def donor_login(request):
         user = authenticate(username=username, password=password)
         if user:
             login(request, user)
-            return HttpResponse('LOGGED_IN')
+            return HttpResponseRedirect('/donor/')
         else:
             return HttpResponse('WRONG AUTH DETAILS')
     else:
