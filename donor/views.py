@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 
 from donor.forms import DonorForm, StoreForm, CouponSubmitForm
 from donor.models import DonorProfile
@@ -17,7 +18,7 @@ def sale(request):
                 code = form.cleaned_data['coupon']
                 # coupon = Coupon.objects.get(id=code)
                 # coupon.delete()
-                return HttpResponseRedirect('/donor/sale')
+                return HttpResponseRedirect('/donor/sale/')
         else:
             form = CouponSubmitForm()
         return render(request,"donor/couponsubmit.html",{'form':form}) #Change couponsubmit to the right template
