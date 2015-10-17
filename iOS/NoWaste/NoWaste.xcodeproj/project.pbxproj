@@ -23,6 +23,7 @@
 		819CEE001BD24CCB00B0EF87 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEDFE1BD24CCB00B0EF87 /* Camera.m */; settings = {ASSET_TAGS = (); }; };
 		819CEE031BD2550800B0EF87 /* ServerAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEE011BD2550800B0EF87 /* ServerAPI.m */; settings = {ASSET_TAGS = (); }; };
 		819CEE061BD2570200B0EF87 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEE041BD2570200B0EF87 /* Common.m */; settings = {ASSET_TAGS = (); }; };
+		819CEE3A1BD288E500B0EF87 /* Config.h in Sources */ = {isa = PBXBuildFile; fileRef = 819CEE391BD288E500B0EF87 /* Config.h */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		819CEE021BD2550800B0EF87 /* ServerAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAPI.h; sourceTree = "<group>"; };
 		819CEE041BD2570200B0EF87 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		819CEE051BD2570200B0EF87 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		819CEE391BD288E500B0EF87 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		819CEDCC1BD231F700B0EF87 /* NoWaste */ = {
 			isa = PBXGroup;
 			children = (
+				819CEE391BD288E500B0EF87 /* Config.h */,
 				819CEE021BD2550800B0EF87 /* ServerAPI.h */,
 				819CEE011BD2550800B0EF87 /* ServerAPI.m */,
 				819CEDFF1BD24CCB00B0EF87 /* Camera.h */,
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				819CEE061BD2570200B0EF87 /* Common.m in Sources */,
+				819CEE3A1BD288E500B0EF87 /* Config.h in Sources */,
 				819CEDF41BD24A3900B0EF87 /* Sales.m in Sources */,
 				819CEDD51BD231F700B0EF87 /* LandingViewController.m in Sources */,
 				819CEDF21BD24A3900B0EF87 /* AddFood.m in Sources */,
@@ -362,6 +366,7 @@
 				819CEDE31BD231F700B0EF87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

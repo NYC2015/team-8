@@ -129,7 +129,7 @@
                                 <animations/>
                                 <state key="normal" title="Go"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaK-Qx-uvn">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaK-Qx-uvn">
                                 <rect key="frame" x="97" y="231" width="34" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Back">
@@ -139,7 +139,7 @@
                                     <segue destination="BYZ-38-t0r" kind="modal" animates="NO" id="5qh-KZ-RpF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5na-VA-dPR">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5na-VA-dPR">
                                 <rect key="frame" x="174" y="231" width="49" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit">
