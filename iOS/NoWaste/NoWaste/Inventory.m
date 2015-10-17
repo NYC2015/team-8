@@ -11,11 +11,14 @@
 
 @interface Inventory()
 
+@property IBOutlet UITableView *invTable;
+
 @end
 
 @implementation Inventory {
     ServerAPI* server;
     NSMutableDictionary* dict;
+    NSArray *keys;
 }
 
 - (void)viewDidLoad {
@@ -23,6 +26,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     server = [ServerAPI getInstance];
     dict = server.inventory;
+    keys = [dict allKeys];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +45,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [exampleItems count];
+    return [dict count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -55,7 +59,9 @@
     }
     
     UILabel *cellLabel = (UILabel *)[cell viewWithTag:10];
-    cellLabel.text = exampleItems[indexPath.row];
+    NSString *cellText = [NSString stringWithFormat:@"%@ - %@ pounds", keys[indexPath.row], dict[keys[indexPath.row]]];
+    cellLabel.text = cellText;
+    NSLog(@"%@", cellText);
     
     
     
