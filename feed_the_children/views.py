@@ -57,5 +57,5 @@ def user_logout(request):
 
 @login_required()
 def list_of_food(request):
-    context_dict = {'items': [('bannnas', 'walgreens', 3), ('watermelon', 'walgreens', 1), ('milk', 'costco', 1)]}
+    context_dict = {'items': [('Bananas', 'Walgreens', 3), ('Watermelon', 'Walgreens', 1), ('Milk', 'Costco', 1)]}
     return render(request, 'feed_the_children/foodlist.html', context_dict)

@@ -11,21 +11,23 @@
     </head>
 
     <body>
-      <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Feed the Children</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        {% block menu %}
-          {% endblock %}
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        {% block menu_mobile %}
-          {% endblock %}
-      </ul>
-    </div>
-  </nav>
-      <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <div class = "blue lighten-2">
+                    <a href="#!" class="brand-logo center">Feed the Children</a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        {% block menu %}
+                        {% endblock %}
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        {% block menu_mobile %}
+                        {% endblock %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
           {% block content %}
           {% endblock %}
       </div>
