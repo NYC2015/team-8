@@ -14,6 +14,11 @@ def index(request):
 
 
 def register(request):
+    """
+    Register for a user account and profile. Profile info extracted from USDA DB.
+    :param request:
+    :return:
+    """
     if request.method == 'POST':
         user_form = UserForm(data=request.POST)
         if user_form.is_valid():
@@ -36,6 +41,11 @@ def register(request):
 
 
 def user_login(request):
+    """
+    User login.
+    :param request:
+    :return:
+    """
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -58,6 +68,11 @@ def user_logout(request):
 
 @login_required()
 def list_of_food(request):
+    """
+    Generates a list of stores based on query or returns a list of items based on user's zip code.
+    :param request:
+    :return:
+    """
     if request.GET.get('q', ''):
         foods = Food.objects.filter(name=request.GET.get('q', ''))
         context_dict = {'sitems': [(v.store, v.name, v.quantity, v.weight) for v in foods]}

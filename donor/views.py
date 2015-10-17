@@ -12,6 +12,11 @@ def index(request):
 
 
 def register(request):
+    """
+    Allows registration for a donor profile.
+    :param request:
+    :return: render response
+    """
     if request.method == 'POST':
         donor_form = DonorForm(data=request.POST)
         store_form = StoreForm(data=request.POST)
@@ -33,6 +38,11 @@ def register(request):
 
 
 def donor_login(request):
+    """
+    Allows donors to login.
+    :param request:
+    :return:
+    """
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
