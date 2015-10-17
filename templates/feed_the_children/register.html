@@ -3,6 +3,8 @@
 <form action="/snap/register/" method="post" id="user_form" enctype="multipart/form-data">
     {% csrf_token %}
     {{ user_form.as_p }}
-     <input type="submit" value="Go">
+       <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
 </form>
 {% endblock %}
