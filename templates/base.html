@@ -19,8 +19,8 @@
       {% if user.is_authenticated %}
           <li><a href="/snap/logout">Logout</a> </li>
       {% endif %}
-        {% block menu %}
-          {% endblock %}
+      {% block menu %}
+      {% endblock %}
       </ul>
       <ul class="side-nav" id="mobile-demo">
         {% block menu_mobile %}
