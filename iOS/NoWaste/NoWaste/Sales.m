@@ -6,13 +6,13 @@
 //  Copyright © 2015 com.reynoldsJay. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "Sales.h"
 
-@interface ViewController ()
+@interface Sales ()
 
 @end
 
-@implementation ViewController
+@implementation Sales
 
 - (void)viewDidLoad {
     [super viewDidLoad];

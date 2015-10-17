@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		819CEDCF1BD231F700B0EF87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEDCE1BD231F700B0EF87 /* main.m */; };
 		819CEDD21BD231F700B0EF87 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEDD11BD231F700B0EF87 /* AppDelegate.m */; };
-		819CEDD51BD231F700B0EF87 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEDD41BD231F700B0EF87 /* ViewController.m */; };
+		819CEDD51BD231F700B0EF87 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEDD41BD231F700B0EF87 /* LandingViewController.m */; };
 		819CEDD81BD231F700B0EF87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 819CEDD61BD231F700B0EF87 /* Main.storyboard */; };
 		819CEDDA1BD231F700B0EF87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 819CEDD91BD231F700B0EF87 /* Assets.xcassets */; };
 		819CEDDD1BD231F700B0EF87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 819CEDDB1BD231F700B0EF87 /* LaunchScreen.storyboard */; };
 		819CEDE61BD2388700B0EF87 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 819CEDE51BD2388700B0EF87 /* logo.png */; settings = {ASSET_TAGS = (); }; };
 		819CEDE81BD240D400B0EF87 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 819CEDE71BD240D400B0EF87 /* camera.png */; settings = {ASSET_TAGS = (); }; };
+		819CEDF21BD24A3900B0EF87 /* AddFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEDEF1BD24A3900B0EF87 /* AddFood.m */; settings = {ASSET_TAGS = (); }; };
+		819CEDF31BD24A3900B0EF87 /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEDF01BD24A3900B0EF87 /* Inventory.m */; settings = {ASSET_TAGS = (); }; };
+		819CEDF41BD24A3900B0EF87 /* Sales.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEDF11BD24A3900B0EF87 /* Sales.m */; settings = {ASSET_TAGS = (); }; };
+		819CEDFA1BD24A4300B0EF87 /* VendorLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEDF51BD24A4300B0EF87 /* VendorLoginVC.m */; settings = {ASSET_TAGS = (); }; };
+		819CEDFB1BD24A4300B0EF87 /* VendorOps.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEDF61BD24A4300B0EF87 /* VendorOps.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,14 +27,24 @@
 		819CEDCE1BD231F700B0EF87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		819CEDD01BD231F700B0EF87 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		819CEDD11BD231F700B0EF87 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		819CEDD31BD231F700B0EF87 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		819CEDD41BD231F700B0EF87 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		819CEDD31BD231F700B0EF87 /* LandingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandingViewController.h; sourceTree = "<group>"; };
+		819CEDD41BD231F700B0EF87 /* LandingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LandingViewController.m; sourceTree = "<group>"; };
 		819CEDD71BD231F700B0EF87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		819CEDD91BD231F700B0EF87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		819CEDDC1BD231F700B0EF87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		819CEDDE1BD231F700B0EF87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		819CEDE51BD2388700B0EF87 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = img/logo.png; sourceTree = "<group>"; };
 		819CEDE71BD240D400B0EF87 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = img/camera.png; sourceTree = "<group>"; };
+		819CEDEF1BD24A3900B0EF87 /* AddFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFood.m; sourceTree = "<group>"; };
+		819CEDF01BD24A3900B0EF87 /* Inventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inventory.m; sourceTree = "<group>"; };
+		819CEDF11BD24A3900B0EF87 /* Sales.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sales.m; sourceTree = "<group>"; };
+		819CEDF51BD24A4300B0EF87 /* VendorLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VendorLoginVC.m; sourceTree = "<group>"; };
+		819CEDF61BD24A4300B0EF87 /* VendorOps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VendorOps.m; sourceTree = "<group>"; };
+		819CEDF71BD24A4300B0EF87 /* Sales.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sales.h; sourceTree = "<group>"; };
+		819CEDF81BD24A4300B0EF87 /* VendorLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VendorLoginVC.h; sourceTree = "<group>"; };
+		819CEDF91BD24A4300B0EF87 /* VendorOps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VendorOps.h; sourceTree = "<group>"; };
+		819CEDFC1BD24A9100B0EF87 /* AddFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFood.h; sourceTree = "<group>"; };
+		819CEDFD1BD24A9100B0EF87 /* Inventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inventory.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +77,21 @@
 		819CEDCC1BD231F700B0EF87 /* NoWaste */ = {
 			isa = PBXGroup;
 			children = (
+				819CEDF81BD24A4300B0EF87 /* VendorLoginVC.h */,
+				819CEDF51BD24A4300B0EF87 /* VendorLoginVC.m */,
+				819CEDF91BD24A4300B0EF87 /* VendorOps.h */,
+				819CEDF61BD24A4300B0EF87 /* VendorOps.m */,
+				819CEDFC1BD24A9100B0EF87 /* AddFood.h */,
+				819CEDEF1BD24A3900B0EF87 /* AddFood.m */,
+				819CEDFD1BD24A9100B0EF87 /* Inventory.h */,
+				819CEDF01BD24A3900B0EF87 /* Inventory.m */,
+				819CEDF71BD24A4300B0EF87 /* Sales.h */,
+				819CEDF11BD24A3900B0EF87 /* Sales.m */,
 				819CEDE41BD2386300B0EF87 /* Img */,
 				819CEDD01BD231F700B0EF87 /* AppDelegate.h */,
 				819CEDD11BD231F700B0EF87 /* AppDelegate.m */,
-				819CEDD31BD231F700B0EF87 /* ViewController.h */,
-				819CEDD41BD231F700B0EF87 /* ViewController.m */,
+				819CEDD31BD231F700B0EF87 /* LandingViewController.h */,
+				819CEDD41BD231F700B0EF87 /* LandingViewController.m */,
 				819CEDD61BD231F700B0EF87 /* Main.storyboard */,
 				819CEDD91BD231F700B0EF87 /* Assets.xcassets */,
 				819CEDDB1BD231F700B0EF87 /* LaunchScreen.storyboard */,
@@ -165,9 +190,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				819CEDD51BD231F700B0EF87 /* ViewController.m in Sources */,
+				819CEDF41BD24A3900B0EF87 /* Sales.m in Sources */,
+				819CEDD51BD231F700B0EF87 /* LandingViewController.m in Sources */,
+				819CEDF21BD24A3900B0EF87 /* AddFood.m in Sources */,
+				819CEDFA1BD24A4300B0EF87 /* VendorLoginVC.m in Sources */,
 				819CEDD21BD231F700B0EF87 /* AppDelegate.m in Sources */,
 				819CEDCF1BD231F700B0EF87 /* main.m in Sources */,
+				819CEDFB1BD24A4300B0EF87 /* VendorOps.m in Sources */,
+				819CEDF31BD24A3900B0EF87 /* Inventory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
