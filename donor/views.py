@@ -2,9 +2,8 @@ from django.shortcuts import render, HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
-from donor.forms import DonorForm, StoreForm
+from donor.forms import DonorForm, StoreForm, CouponSubmitForm
 from donor.models import DonorProfile
-
 
 # Create your views here.
 
