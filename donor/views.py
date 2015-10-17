@@ -44,7 +44,7 @@ def donor_login(request):
         else:
             return HttpResponse('WRONG AUTH DETAILS')
     else:
-        return render(request, 'feed_the_children/login.html', {})
+        return render(request, 'donor/login.html', {})
 
 
 @login_required()
