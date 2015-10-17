@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>Feed the Children</title>
 
@@ -38,21 +37,26 @@
             </button>
             <a class="navbar-brand" href="#">Feed the Children</a>
           </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
 
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="./">Logout<span class="sr-only">(current)</span></a></li>
-              <!-- <li><a href="../navbar-static-top/">Sales</a></li> -->
-            </ul>
-          </div>
         </div>
       </nav>
   </div>
 
-  {% block content %}
-  {% endblock %}
+
+  <a name="about"></a>
+     <div class="intro-header">
+         <div class="container">
+
+             <div class="row">
+                 {% block content %}
+                 {% endblock %}
+             </div>
+
+         </div>
+         <!-- /.container -->
+
+     </div>
+
 
 
       <footer class="footer">
