@@ -1,0 +1,7 @@
+{% if not registered %}
+<form action="/snap/register/" method="post" id="user_form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ user_form.as_p }}
+     <input type="submit" value="Go">
+</form>
+{% endif %}
