@@ -7,6 +7,7 @@ from feed_the_children.models import UserProfile
 
 from donor.models import Coupon
 import random
+from donor.models import Food, Store
 
 # Create your views here.
 def index(request):
@@ -58,7 +59,16 @@ def user_logout(request):
 
 @login_required()
 def list_of_food(request):
-    context_dict = {'items': [('bannnas', 'walgreens', 3), ('watermelon', 'walgreens', 1), ('milk', 'costco', 1)]}
+    if request.GET.get('zip', ''):
+        stores = Store.objects.filter(zip=request.GET['zip'])
+    else:
+        stores = Store.objects.filter(zip=10018)
+    nearby_foods = []
+    for store in stores:
+        foods = Food.objects.filter(store=store.pk)
+        for food in foods:
+            nearby_foods.append((store.name, food.name, food.quantity, food.weight))
+    context_dict = {'items': [v for v in nearby_foods]}
     return render(request, 'feed_the_children/foodlist.html', context_dict)
 
 
