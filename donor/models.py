@@ -29,3 +29,12 @@ class Food(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class Coupon(models.Model):
+    food = models.ForeignKey(Food)
+    code = models.CharField(max_length=50, help_text='Coupon code text', default='No coupon code entered')
+    quantity = models.IntegerField(help_text='Quantity of coupons')
+
+    def __unicode__(self):
+        return self.code
