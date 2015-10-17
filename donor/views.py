@@ -6,9 +6,9 @@ from .models import Coupon
 
 # Create your views here.
 def sale(request):
-    if request.session.get('store_login',False): #Might need to change store_login
-        return HttpResponse("Please log in")
-    else:
+    #if request.user.username != 'donor login':              Check if donor login
+    #    return HttpResponse("Please log in")
+    #else:
         if request.method == 'POST':
             form = CouponSubmitForm(request.POST)
             if form.is_valid():
