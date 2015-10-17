@@ -1,14 +1,14 @@
 from django.shortcuts import render, HttpResponse
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
-from feed_the_children.forms import UserForm, UserProfileForm
+from feed_the_children.forms import UserForm
 from feed_the_children.models import UserProfile
 
 
 # Create your views here.
 def index(request):
     return render(request, 'base.html')
-
 
 def register(request):
     registered = False
@@ -27,7 +27,7 @@ def register(request):
             registered = True
             return HttpResponse('Registered')
         else:
-            print user_form.errors
+            print (user_form.errors)
     else:
         user_form = UserForm()
 
@@ -47,3 +47,9 @@ def user_login(request):
             return HttpResponse('WRONG AUTH DETAILS')
     else:
         return render(request, 'feed_the_children/login.html', {})
+
+
+@login_required()
+def user_logout(request):
+    logout(request)
+    return HttpResponse('LOGGED_OUT')

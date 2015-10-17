@@ -1,8 +1,49 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+
+from donor.forms import DonorForm, StoreForm
+from donor.models import DonorProfile
 
 
 # Create your views here.
 def register(request):
-    registered = False
     if request.method == 'POST':
-        pass
+        donor_form = DonorForm(data=request.POST)
+        store_form = StoreForm(data=request.POST)
+        if donor_form.is_valid() and store_form.is_valid():
+            store = store_form.save()
+            donor = donor_form.save()
+            donor.set_password(donor.password)
+            donor.is_active = False
+            donor.save()
+            DonorProfile.objects.create(user=donor, store=store)
+            return HttpResponse('REQUEST SENT')
+        else:
+            print donor_form.errors
+    else:
+        donor_form = DonorForm()
+        store_form = StoreForm()
+
+    return render(request, 'donor/register.html', {'donor_form': donor_form, 'store_form': store_form})
+
+
+def donor_login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(username=username, password=password)
+        if user:
+            login(request, user)
+            return HttpResponse('LOGGED_IN')
+        else:
+            return HttpResponse('WRONG AUTH DETAILS')
+    else:
+        return render(request, 'feed_the_children/login.html', {})
+
+
+@login_required()
+def donor_logout(request):
+    logout(request)
+    return HttpResponse('LOGGED_OUT')
