@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from django.contrib.auth import authenticate, login
 
 from feed_the_children.forms import UserForm, UserProfileForm
 from feed_the_children.models import UserProfile
@@ -31,3 +32,13 @@ def register(request):
         user_form = UserForm()
 
     return render(request, 'feed_the_children/register.html', {'user_form': user_form, 'registered': registered})
+
+def login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(username, password)
+        if user:
+            login(request, user)
+            return HttpResponse('LOGGED_IN')
