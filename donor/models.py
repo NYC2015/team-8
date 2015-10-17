@@ -3,13 +3,6 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
-class DonorProfile(models.Model):
-    user = models.OneToOneField(User)
-
-    def __unicode__(self):
-        return str(self.user)
-
-
 class Store(models.Model):
     name = models.CharField(max_length=50, help_text='Store name', default='No name provided')
     address = models.CharField(max_length=50, help_text='Address', default='No address provided')
@@ -18,6 +11,14 @@ class Store(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class DonorProfile(models.Model):
+    user = models.OneToOneField(User)
+    store = models.ForeignKey(Store, default=None)
+
+    def __unicode__(self):
+        return str(self.user)
 
 
 class Food(models.Model):

@@ -1,0 +1,9 @@
+{% if registered %}
+{% else %}
+<form action="/donor/register/" method="post" id="donor_form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ store_form.as_p }}
+    {{ donor_form.as_p }}
+     <input type="submit" value="Go">
+</form>
+{% endif %}

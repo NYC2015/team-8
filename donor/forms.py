@@ -4,10 +4,18 @@ from django.contrib.auth.models import User
 from donor import models
 
 
+class DonorForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
+
+    class Meta:
+        model = User
+        fields = ('username', 'password', 'email')
+
+
 class DonorProfileForm(forms.ModelForm):
     class Meta:
         model = models.DonorProfile
-    fields = ('user',)
+        fields = ('user', 'store',)
 
 
 class StoreForm(forms.ModelForm):
