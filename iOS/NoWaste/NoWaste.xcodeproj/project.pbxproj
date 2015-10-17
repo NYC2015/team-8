@@ -13,6 +13,8 @@
 		819CEDD81BD231F700B0EF87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 819CEDD61BD231F700B0EF87 /* Main.storyboard */; };
 		819CEDDA1BD231F700B0EF87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 819CEDD91BD231F700B0EF87 /* Assets.xcassets */; };
 		819CEDDD1BD231F700B0EF87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 819CEDDB1BD231F700B0EF87 /* LaunchScreen.storyboard */; };
+		819CEDE61BD2388700B0EF87 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 819CEDE51BD2388700B0EF87 /* logo.png */; settings = {ASSET_TAGS = (); }; };
+		819CEDE81BD240D400B0EF87 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 819CEDE71BD240D400B0EF87 /* camera.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		819CEDD91BD231F700B0EF87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		819CEDDC1BD231F700B0EF87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		819CEDDE1BD231F700B0EF87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		819CEDE51BD2388700B0EF87 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = img/logo.png; sourceTree = "<group>"; };
+		819CEDE71BD240D400B0EF87 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = img/camera.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		819CEDCC1BD231F700B0EF87 /* NoWaste */ = {
 			isa = PBXGroup;
 			children = (
+				819CEDE41BD2386300B0EF87 /* Img */,
 				819CEDD01BD231F700B0EF87 /* AppDelegate.h */,
 				819CEDD11BD231F700B0EF87 /* AppDelegate.m */,
 				819CEDD31BD231F700B0EF87 /* ViewController.h */,
@@ -77,6 +82,15 @@
 				819CEDCE1BD231F700B0EF87 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		819CEDE41BD2386300B0EF87 /* Img */ = {
+			isa = PBXGroup;
+			children = (
+				819CEDE71BD240D400B0EF87 /* camera.png */,
+				819CEDE51BD2388700B0EF87 /* logo.png */,
+			);
+			name = Img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,9 +150,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				819CEDE61BD2388700B0EF87 /* logo.png in Resources */,
 				819CEDDD1BD231F700B0EF87 /* LaunchScreen.storyboard in Resources */,
 				819CEDDA1BD231F700B0EF87 /* Assets.xcassets in Resources */,
 				819CEDD81BD231F700B0EF87 /* Main.storyboard in Resources */,
+				819CEDE81BD240D400B0EF87 /* camera.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
