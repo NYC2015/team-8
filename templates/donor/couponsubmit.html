@@ -1,8 +1,10 @@
 {% extends "base.html"%}
-{% block body %}
+{% block content %}
   <form action="/donor/sale/" method="post">
-    {%csrf_token%}
-    {{form}}
-    <input type="submit",name="submit">
+    <div class ="form-group">
+      {%csrf_token%}
+      {{form}}
+      <button type = "submit" class="btn btn-primary"> Submit </button>
+    </div>
   </form>
 {% endblock %}
