@@ -5,7 +5,7 @@ from .forms import CouponSubmitForm
 # Create your views here.
 
 def sale(request):
-    if request.session.get('store_login',False):
+    if request.session.get('store_login',False): #Might need to change store_login
         return HttpResponse("Please log in")
     else:
         if request.method == 'POST':
