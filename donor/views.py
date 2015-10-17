@@ -7,6 +7,22 @@ from donor.models import DonorProfile
 
 
 # Create your views here.
+
+def sale(request):
+    if request.session.get('store_login',False): #Might need to change store_login
+        return HttpResponse("Please log in")
+    else:
+        if request.method == 'POST':
+            form = CouponSubmitForm(request.POST)
+            if form.is_valid():
+                code = form.cleaned_data['coupon']
+                # coupon = Coupon.objects.get(id=code)
+                # coupon.delete()
+                return HttpResponseRedirect('/donor/sale')
+        else:
+            form = CouponSubmitForm()
+        return render(request,"donor/couponsubmit.html",{'form':form}) #Change couponsubmit to the right template
+
 def register(request):
     if request.method == 'POST':
         donor_form = DonorForm(data=request.POST)
@@ -20,7 +36,7 @@ def register(request):
             DonorProfile.objects.create(user=donor, store=store)
             return HttpResponse('REQUEST SENT')
         else:
-            print donor_form.errors
+            print (donor_form.errors)
     else:
         donor_form = DonorForm()
         store_form = StoreForm()

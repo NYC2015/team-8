@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 
 from donor import models
 
+class CouponSubmitForm(forms.Form):
+    coupon = forms.CharField(label = "Coupon Code")
 
 class DonorForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
