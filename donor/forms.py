@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 
 from donor import models
 
+class FoodSearchForm(forms.Form):
+    food = forms.CharField(label = "food")
+
 class CouponSubmitForm(forms.Form):
     coupon = forms.CharField(label = "Coupon Code")
 

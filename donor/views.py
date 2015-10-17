@@ -3,10 +3,22 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 
-from donor.forms import DonorForm, StoreForm, CouponSubmitForm
-from donor.models import DonorProfile
+from donor.forms import DonorForm, StoreForm, CouponSubmitForm, FoodSearchForm
+from donor.models import DonorProfile, Food
 
 # Create your views here.
+
+def search(request):
+    results = None
+    if request.method == 'POST':
+        form = FoodSearchForm(request.POST)
+        if form.is_valid():
+            food = form.cleaned_data['food']
+            results =  Food.objects.filter(name__contains = food) #Might not work.
+        return render(request,"donor/search.html",{'results':results,'form':form})
+    else:
+        form = FoodSearchForm()
+        return render(request,"donor/search.html",{'results':results,'form':form})
 
 def sale(request):
     if request.session.get('store_login',False): #Might need to change store_login
@@ -21,7 +33,7 @@ def sale(request):
                 return HttpResponseRedirect('/donor/sale/')
         else:
             form = CouponSubmitForm()
-        return render(request,"donor/couponsubmit.html",{'form':form}) #Change couponsubmit to the right template
+        return render(request,"donor/couponsubmit.html",{'form':form})
 
 def register(request):
     if request.method == 'POST':
