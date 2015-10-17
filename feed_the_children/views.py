@@ -26,7 +26,7 @@ def register(request):
             registered = True
             return HttpResponse('Registered')
         else:
-            print user_form.errors
+            print (user_form.errors)
     else:
         user_form = UserForm()
 
