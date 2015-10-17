@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 
 from feed_the_children.forms import UserForm
 from feed_the_children.models import UserProfile
-
+import random
 
 # Create your views here.
 def index(request):
@@ -59,3 +59,9 @@ def user_logout(request):
 def list_of_food(request):
     context_dict = {'items': [('bannnas', 'walgreens', 3), ('watermelon', 'walgreens', 1), ('milk', 'costco', 1)]}
     return render(request, 'feed_the_children/foodlist.html', context_dict)
+
+def get_coupon(request):
+    coupon_list = ['0000','0001','1000','1111']
+    index = random.randrange(0,5)
+    return render(request, 'feed_the_children/coupon.html',coupon_list[index])
+
